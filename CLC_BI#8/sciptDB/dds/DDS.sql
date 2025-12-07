@@ -64,21 +64,20 @@ GO
 -- =============================================
 
 CREATE TABLE Fact_Flights (
-    Flight_ID INT PRIMARY KEY, -- Khóa chính tự tăng
+    Flight_ID INT PRIMARY KEY,
     
     -- Foreign Keys
     Date_Key INT,
     Airline_ID INT,
     Origin_Airport_ID INT,
     Dest_Airport_ID INT,
-    Cancel_Reason_ID CHAR(1),
-
+    Cancel_Reason_ID CHAR(1) NULL,
+    
     -- Business Keys & Attributes
     Flight_Number VARCHAR(20),
     Tail_Number VARCHAR(20),
-    Scheduled_Dep_Time VARCHAR(5),  -- '05:56'
-    -- Hour_Key INT,                   -- 5
-
+    Scheduled_Dep_Time VARCHAR(5),
+    
     -- Metrics (Facts)
     Dep_Delay DECIMAL(10,2),
     Arr_Delay DECIMAL(10,2),
@@ -97,15 +96,14 @@ CREATE TABLE Fact_Flights (
     -- Flags
     Is_Cancelled BIT,
     Is_Diverted BIT,
-
     STATUS INT DEFAULT 1,
-
+    
     -- Constraints
-	FOREIGN KEY (Date_Key) REFERENCES Dim_Date(Date_Key),
-	FOREIGN KEY (Airline_ID) REFERENCES Dim_Airline(Airline_ID),
-	FOREIGN KEY (Origin_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
-	FOREIGN KEY (Dest_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
-	FOREIGN KEY (Cancel_Reason_ID) REFERENCES Dim_Reason(Reason_ID)
+    FOREIGN KEY (Date_Key) REFERENCES Dim_Date(Date_Key),
+    FOREIGN KEY (Airline_ID) REFERENCES Dim_Airline(Airline_ID),
+    FOREIGN KEY (Origin_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
+    FOREIGN KEY (Dest_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
+    FOREIGN KEY (Cancel_Reason_ID) REFERENCES Dim_Reason(Reason_ID)
 );
 GO
 
