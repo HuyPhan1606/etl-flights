@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="136"
-  DTS:VersionGUID="{A60F8399-1923-42BA-BA0B-5A3A8D211669}">
+  DTS:VersionBuild="141"
+  DTS:VersionGUID="{E8B584E3-5BF9-4F75-AD73-5C645572632A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -15310,19 +15310,19 @@
                   startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 2.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output2]"
+                  endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight_1_source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
                   endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 2.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight3_source.Outputs[Flat File Source Output]" />
                 <path
-                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
+                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
                   endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 1.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight2_source.Outputs[Flat File Source Output]" />
-                <path
-                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
-                  endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date.Inputs[Derived Column Input]"
-                  name="Flat File Source Output"
-                  startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight_1_source.Outputs[Flat File Source Output]" />
                 <path
                   refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Incremental Load]"
                   endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Derived Column 2.Inputs[Derived Column Input]"
@@ -16149,85 +16149,85 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="118,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Error log"
-          TopLeft="280.833317989277,139.533332363036" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Error log 1"
-          TopLeft="734.333303582338,113.133334278331" />
-        <NodeLayout
           Size="169,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight2_source"
-          TopLeft="473.333307471541,41.1333330862389" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Row Count 1"
-          TopLeft="487.944398551905,365.911110444025" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Import to flight_stage"
-          TopLeft="488.333332480655,773.199995281299" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Conditional Split 2"
-          TopLeft="941.233305045136,193.733332348532" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Derived Column 1"
-          TopLeft="485.333307292727,292.93333232628" />
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight3_source"
+          TopLeft="938.233305089839,22.9333332127995" />
         <NodeLayout
           Size="134,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date"
           TopLeft="95.999999562899,122.133331816461" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Conditional Split 1"
-          TopLeft="480.333307367233,205.333330925571" />
+          Size="120,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Union All"
+          TopLeft="478.066646359696,526.866666045917" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight_1_source"
-          TopLeft="79.999999801318,47.1333329340484" />
+          Size="153,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Derived Column 1"
+          TopLeft="485.333307292727,292.93333232628" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Conditional Split 2"
+          TopLeft="941.233305045136,193.733332348532" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Row Count 2"
+          TopLeft="957.39993951619,368.155554825178" />
         <NodeLayout
           Size="143,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 2"
           TopLeft="955.23330483652,103.933332005806" />
         <NodeLayout
           Size="162,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Remove duplicate"
+          TopLeft="493.166642125283,645.066666208638" />
+        <NodeLayout
+          Size="162,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Derived Column 2"
           TopLeft="950.233304911026,285.533329562015" />
         <NodeLayout
           Size="162,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Remove duplicate"
-          TopLeft="493.166642125283,645.066666208638" />
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Conditional Split 1"
+          TopLeft="480.333307367233,205.333330925571" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Error log 1"
+          TopLeft="734.333303582338,113.133334278331" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Row Count 1"
+          TopLeft="487.944398551905,365.911110444025" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 1"
+          TopLeft="490.333307218221,115.133331983553" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Error log"
+          TopLeft="280.833317989277,139.533332363036" />
         <NodeLayout
           Size="130,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Row Count"
           TopLeft="97.222216910235,366.022221123355" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Row Count 2"
-          TopLeft="957.39993951619,368.155554825178" />
-        <NodeLayout
           Size="169,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight3_source"
-          TopLeft="938.233305089839,22.9333332127995" />
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight2_source"
+          TopLeft="473.333307471541,41.1333330862389" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight_1_source"
+          TopLeft="79.999999801318,47.1333329340484" />
         <NodeLayout
           Size="153,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Derived Column"
           TopLeft="86.9999996970101,301.133329149154" />
         <NodeLayout
-          Size="120,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Union All"
-          TopLeft="478.066646359696,526.866666045917" />
-        <NodeLayout
           Size="154,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Conditional Split"
           TopLeft="84.999999726812,205.133330579665" />
         <NodeLayout
-          Size="134,42"
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 1"
-          TopLeft="490.333307218221,115.133331983553" />
+          Size="175,42"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Import to flight_stage"
+          TopLeft="488.333332480655,773.199995281299" />
         <NodeLayout
           Size="126,42"
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Error log 2"
@@ -16464,28 +16464,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output2]"
-          TopLeft="1024.73330496318,64.5333332127994">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.399998793006"
-              Start="0,0"
-              End="0,31.899998793006">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.899998793006" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
           TopLeft="165.399999682109,88.7333329340483">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16507,7 +16485,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
           TopLeft="557.633307344881,82.7333330862389">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16520,6 +16498,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,24.8999988973141" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
+          TopLeft="1024.73330496318,64.5333332127994">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.399998793006"
+              Start="0,0"
+              End="0,31.899998793006">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.899998793006" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

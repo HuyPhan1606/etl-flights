@@ -101,11 +101,11 @@ CREATE TABLE Fact_Flights (
     STATUS INT DEFAULT 1,
 
     -- Constraints
-    FOREIGN KEY (Date_Key) REFERENCES Dim_Date(Date_Key),
-    FOREIGN KEY (Airline_ID) REFERENCES Dim_Airline(Airline_ID),
-    FOREIGN KEY (Origin_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
-    FOREIGN KEY (Dest_Airport_ID) REFERENCES Dim_Airport(Airport_ID)
-    -- Lưu ý: Cancel_Reason_ID có thể NULL nên cẩn thận khi tạo FK nếu dữ liệu chưa sạch
+	FOREIGN KEY (Date_Key) REFERENCES Dim_Date(Date_Key),
+	FOREIGN KEY (Airline_ID) REFERENCES Dim_Airline(Airline_ID),
+	FOREIGN KEY (Origin_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
+	FOREIGN KEY (Dest_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
+	FOREIGN KEY (Cancel_Reason_ID) REFERENCES Dim_Reason(Reason_ID)
 );
 GO
 
