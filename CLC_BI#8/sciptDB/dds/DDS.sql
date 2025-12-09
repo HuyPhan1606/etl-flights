@@ -19,6 +19,7 @@ GO
 -- Bảng Hãng bay
 CREATE TABLE Dim_Airline (
     Airline_ID INT PRIMARY KEY,  -- Mã IATA
+	Airline_NK VARCHAR(10) NOT NULL,
     Airline_Name VARCHAR(255),
     STATUS INT DEFAULT 1
 );
@@ -27,6 +28,7 @@ GO
 -- Bảng Sân bay
 CREATE TABLE Dim_Airport (
     Airport_ID INT PRIMARY KEY,  -- Mã IATA
+	Airport_NK VARCHAR(10) NOT NULL,
     Airport_Name VARCHAR(255),
     City VARCHAR(100),
     State VARCHAR(50),
