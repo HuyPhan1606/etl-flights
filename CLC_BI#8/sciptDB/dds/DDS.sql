@@ -66,46 +66,53 @@ GO
 -- =============================================
 
 CREATE TABLE Fact_Flights (
-    Flight_ID INT PRIMARY KEY,
-    
+    Flight_ID           INT PRIMARY KEY,
+
     -- Foreign Keys
-    Date_Key INT,
-    Airline_ID INT,
-    Origin_Airport_ID INT,
-    Dest_Airport_ID INT,
-    Cancel_Reason_ID CHAR(1) NULL,
-    
+    Date_Key            INT,
+    Airline_ID          INT,
+    Origin_Airport_ID   INT,
+    Dest_Airport_ID     INT,
+    Cancel_Reason_ID    CHAR(1) NULL,
+
     -- Business Keys & Attributes
-    Flight_Number VARCHAR(20),
-    Tail_Number VARCHAR(20),
-    Scheduled_Dep_Time VARCHAR(5),
-    
-    -- Metrics (Facts)
-    Dep_Delay DECIMAL(10,2),
-    Arr_Delay DECIMAL(10,2),
-    Air_Time DECIMAL(10,2),
-    Distance INT,
-    Taxi_Out DECIMAL(10,2),
-    Taxi_In DECIMAL(10,2),
-    
-    -- Delay Breakdown
-    Delay_System DECIMAL(10,2),
-    Delay_Security DECIMAL(10,2),
-    Delay_Airline DECIMAL(10,2),
-    Delay_Weather DECIMAL(10,2),
-    Delay_LateAircraft DECIMAL(10,2),
-    
+    Flight_Number       VARCHAR(20),
+    Tail_Number         VARCHAR(20),
+    Scheduled_Dep_Time  VARCHAR(5),  
+    Departure_Time      VARCHAR(5),  
+    Scheduled_Arrival   INT,         
+    Arrival_Time        FLOAT,       
+    Wheels_Off          FLOAT,       
+    Wheels_On           FLOAT,       
+
+    -- Metrics 
+    Dep_Delay           DECIMAL(10,2),
+    Arr_Delay           DECIMAL(10,2),
+    Air_Time            DECIMAL(10,2),
+    Distance            INT,
+    Taxi_Out            DECIMAL(10,2),
+    Taxi_In             DECIMAL(10,2),
+    Scheduled_Time      FLOAT,       
+    Elapsed_Time        FLOAT,       
+
+    -- Delay Breakdown 
+    Delay_System        DECIMAL(10,2),
+    Delay_Security      DECIMAL(10,2),
+    Delay_Airline       DECIMAL(10,2),
+    Delay_Weather       DECIMAL(10,2),
+    Delay_LateAircraft  DECIMAL(10,2),
+
     -- Flags
-    Is_Cancelled BIT,
-    Is_Diverted BIT,
-    STATUS INT DEFAULT 1,
-    
+    Is_Cancelled        BIT,
+    Is_Diverted         BIT,
+    Status              INT DEFAULT 1,
+
     -- Constraints
-    FOREIGN KEY (Date_Key) REFERENCES Dim_Date(Date_Key),
-    FOREIGN KEY (Airline_ID) REFERENCES Dim_Airline(Airline_ID),
+    FOREIGN KEY (Date_Key)          REFERENCES Dim_Date(Date_Key),
+    FOREIGN KEY (Airline_ID)        REFERENCES Dim_Airline(Airline_ID),
     FOREIGN KEY (Origin_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
-    FOREIGN KEY (Dest_Airport_ID) REFERENCES Dim_Airport(Airport_ID),
-    FOREIGN KEY (Cancel_Reason_ID) REFERENCES Dim_Reason(Reason_ID)
+    FOREIGN KEY (Dest_Airport_ID)   REFERENCES Dim_Airport(Airport_ID),
+    FOREIGN KEY (Cancel_Reason_ID)  REFERENCES Dim_Reason(Reason_ID)
 );
 GO
 
@@ -144,3 +151,8 @@ GO
 
 PRINT 'Database DDS_Airline created successfully with all dimension and fact tables!';
 GO
+
+
+SELECT
+    *
+FROM Fact_Flights;

@@ -34,6 +34,7 @@ CREATE TABLE ETL_Process_Log (
     Row_F1 INT NULL,                       -- Added for Flights1
     Row_F2 INT NULL,                       -- Added for Flights2
     Row_F3 INT NULL,                       -- Added for Flights3
+	Row_Flights INT NULL,
     Row_Airline INT NULL,                  -- Added for Airlines
     Row_Airport INT NULL,                  -- Added for Airport
     Error_Message NVARCHAR(MAX) NULL,

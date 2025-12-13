@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="141"
-  DTS:VersionGUID="{E8B584E3-5BF9-4F75-AD73-5C645572632A}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{0FCB10FB-4B20-4908-B354-A3CF1EAD90F2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2091,7 +2091,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="GET LSET_Flight1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2112,7 +2112,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="GET LSET_Flight2"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2133,7 +2133,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="GET LSET_Flight3"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15310,19 +15310,19 @@
                   startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 2.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output2]"
+                  endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 1.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight2_source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
                   endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight_1_source.Outputs[Flat File Source Output]" />
                 <path
-                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
+                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
                   endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 2.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight3_source.Outputs[Flat File Source Output]" />
-                <path
-                  refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
-                  endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Format date 1.Inputs[Derived Column Input]"
-                  name="Flat File Source Output"
-                  startId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Load flight2_source.Outputs[Flat File Source Output]" />
                 <path
                   refId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Incremental Load]"
                   endId="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage\Derived Column 2.Inputs[Derived Column Input]"
@@ -15424,7 +15424,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SET LSET_AIRLINES"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15453,7 +15453,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SET LSET_AIRPORTS"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15482,7 +15482,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SET LSET_FLIGHT1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15511,7 +15511,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SET LSET_FLIGHT2"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15540,7 +15540,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SET LSET_FLIGHT3"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15757,7 +15757,7 @@
           Id="Package\UPDATE LSET"
           TopLeft="140.83332563854,1097.73333021151" />
         <NodeLayout
-          Size="205,42"
+          Size="197,42"
           Id="Package\UPDATE METADATA LOG"
           TopLeft="279.166651413673,1475.66666315311" />
         <EdgeLayout
@@ -15896,7 +15896,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="381.249988526107,1439.73333021151">
+          TopLeft="379.249988526107,1439.73333021151">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16464,28 +16464,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output2]"
-          TopLeft="165.399999682109,88.7333329340483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.3999988824129"
-              Start="0,0"
-              End="0,25.8999988824129">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.8999988824129" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
           TopLeft="557.633307344881,82.7333330862389">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16507,7 +16485,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output1]"
           TopLeft="1024.73330496318,64.5333332127994">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16520,6 +16498,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,31.899998793006" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\IMPORT SOURCE TO STAGE\Import Flight_source to Flight_stage.Paths[Flat File Source Output]"
+          TopLeft="165.399999682109,88.7333329340483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.3999988824129"
+              Start="0,0"
+              End="0,25.8999988824129">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8999988824129" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
