@@ -3,8 +3,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
-        <TargetDatabase>OLAP_proj</TargetDatabase>
+        <TargetServer>MSI\BI_ANALYSIS</TargetServer>
+        <TargetDatabase>OLAP_Flights</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
