@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="afd1e348-2da5-489c-bf6f-94a85c12c54b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c7de6af7-e1ea-4c51-861d-f6b263a55ea7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DDS Airline</ID>
   <Name>DDS Airline</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -14,7 +14,6 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
-      <Value></Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
@@ -28,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="11" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5551" scrolltop="-3924" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="27040" y="23125" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5551" scrolltop="-3298" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="25876" y="23125" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -39,7 +38,7 @@
                 <layoutmanager>
                   <ddsxmlobj />
                 </layoutmanager>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Airline" left="5931" top="12102" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Airline" left="5911" top="12102" logicalid="11" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
                   </control>
@@ -50,7 +49,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Airport" left="20" top="4781" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Airport" left="0" top="4781" logicalid="12" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000ea120000" />
                   </control>
@@ -61,7 +60,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Date" left="11842" top="4781" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3096" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Date" left="11822" top="4781" logicalid="13" controlid="3" masterid="0" hint1="0" hint2="0" width="3096" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000e0000180c0000ea120000" />
                   </control>
@@ -72,7 +71,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Reason" left="5931" top="0" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Reason" left="5911" top="0" logicalid="14" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
                   </control>
@@ -83,7 +82,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact_Flights" left="5473" top="4967" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="4022" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact_Flights" left="5453" top="5364" logicalid="15" controlid="5" masterid="0" hint1="0" hint2="0" width="4022" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000e0000b60f000088130000" />
                   </control>
@@ -94,7 +93,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="5153" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3053" height="964" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2700" top="5703" logicalid="16" controlid="6" masterid="0" hint1="0" hint2="0" width="3053" height="811" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -107,14 +106,14 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="13" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="3020" y="5552" />
-                    <point x="4246" y="5552" />
-                    <point x="4246" y="5817" />
-                    <point x="5473" y="5817" />
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="15" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="3000" y="6102" />
+                    <point x="4226" y="6102" />
+                    <point x="4226" y="6214" />
+                    <point x="5453" y="6214" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5932" top="9667" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="2935" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5912" top="10064" logicalid="17" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="2538" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -128,13 +127,13 @@
                     </ddsxmlobj>
                   </layoutobject>
                   <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="0" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="6331" y="12102" />
-                    <point x="6331" y="11035" />
-                    <point x="6384" y="11035" />
-                    <point x="6384" y="9967" />
+                    <point x="6311" y="12102" />
+                    <point x="6311" y="11035" />
+                    <point x="6364" y="11035" />
+                    <point x="6364" y="10364" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="4603" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3053" height="964" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2700" top="5153" logicalid="18" controlid="8" masterid="0" hint1="0" hint2="0" width="3053" height="811" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -147,14 +146,14 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="11" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="3020" y="5002" />
-                    <point x="4246" y="5002" />
-                    <point x="4246" y="5267" />
-                    <point x="5473" y="5267" />
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="13" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="3000" y="5552" />
+                    <point x="4226" y="5552" />
+                    <point x="4226" y="5664" />
+                    <point x="5453" y="5664" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5932" top="1803" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3464" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5912" top="1803" logicalid="19" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3861" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -168,13 +167,13 @@
                     </ddsxmlobj>
                   </layoutobject>
                   <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="1" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="6331" y="2302" />
-                    <point x="6331" y="3634" />
-                    <point x="6384" y="3634" />
-                    <point x="6384" y="4967" />
+                    <point x="6311" y="2302" />
+                    <point x="6311" y="3634" />
+                    <point x="6364" y="3634" />
+                    <point x="6364" y="5364" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9195" top="4603" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="2947" height="964" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9175" top="4603" logicalid="20" controlid="10" masterid="0" hint1="0" hint2="0" width="2947" height="1361" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -188,10 +187,10 @@
                     </ddsxmlobj>
                   </layoutobject>
                   <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="10" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="11842" y="5002" />
-                    <point x="10669" y="5002" />
-                    <point x="10669" y="5267" />
-                    <point x="9495" y="5267" />
+                    <point x="11822" y="5002" />
+                    <point x="10649" y="5002" />
+                    <point x="10649" y="5664" />
+                    <point x="9475" y="5664" />
                   </connector>
                 </ddscontrol>
               </dds>
@@ -199,7 +198,7 @@
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
             <DiagramViewPortLeft>-5551</DiagramViewPortLeft>
-            <DiagramViewPortTop>-3924</DiagramViewPortTop>
+            <DiagramViewPortTop>-3298</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>100</DiagramZoom>
@@ -214,7 +213,7 @@
       <xs:element name="DDS_x0020_Airline" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="f47f9eef-f23b-414c-aa9a-7e770ade2f62">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="dbo_Dim_Airline" msprop:design-time-name="1e859a5c-8d3b-4593-8596-205b9c520413" msprop:FriendlyName="Dim_Airline" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Dim_Airline">
+            <xs:element name="dbo_Dim_Airline" msprop:DbSchemaName="dbo" msprop:design-time-name="1e859a5c-8d3b-4593-8596-205b9c520413" msprop:FriendlyName="Dim_Airline" msprop:TableType="Table" msprop:DbTableName="Dim_Airline">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Airline_ID" msprop:FriendlyName="Airline_ID" msprop:DbColumnName="Airline_ID" msprop:design-time-name="7ee28b49-2bf4-414a-9e53-2f4359b1c926" type="xs:int" />
@@ -236,7 +235,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_Dim_Airport" msprop:design-time-name="e8a075ec-14d0-40b3-b033-562a02389cfa" msprop:FriendlyName="Dim_Airport" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Dim_Airport">
+            <xs:element name="dbo_Dim_Airport" msprop:DbSchemaName="dbo" msprop:design-time-name="e8a075ec-14d0-40b3-b033-562a02389cfa" msprop:FriendlyName="Dim_Airport" msprop:TableType="Table" msprop:DbTableName="Dim_Airport">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Airport_ID" msprop:FriendlyName="Airport_ID" msprop:DbColumnName="Airport_ID" msprop:design-time-name="63912fb0-b316-4a0e-acc2-37ef81eee9ea" type="xs:int" />
@@ -281,7 +280,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_Dim_Date" msprop:design-time-name="2b7234ac-1f31-44f3-8576-9f5f2e625949" msprop:FriendlyName="Dim_Date" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Dim_Date">
+            <xs:element name="dbo_Dim_Date" msprop:DbSchemaName="dbo" msprop:design-time-name="2b7234ac-1f31-44f3-8576-9f5f2e625949" msprop:FriendlyName="Dim_Date" msprop:TableType="Table" msprop:DbTableName="Dim_Date">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Date_Key" msprop:FriendlyName="Date_Key" msprop:DbColumnName="Date_Key" msprop:design-time-name="5a0717c6-7b1b-4202-8aea-0807e200b78f" type="xs:int" />
@@ -314,7 +313,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_Dim_Reason" msprop:design-time-name="06c44fb1-f28a-46d4-a26f-0f1be9a9dffc" msprop:FriendlyName="Dim_Reason" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Dim_Reason">
+            <xs:element name="dbo_Dim_Reason" msprop:DbSchemaName="dbo" msprop:design-time-name="06c44fb1-f28a-46d4-a26f-0f1be9a9dffc" msprop:FriendlyName="Dim_Reason" msprop:TableType="Table" msprop:DbTableName="Dim_Reason">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Reason_ID" msprop:FriendlyName="Reason_ID" msprop:DbColumnName="Reason_ID" msprop:design-time-name="67acd43d-0fc2-42a9-99f0-00539f70c430">
@@ -335,7 +334,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_Fact_Flights" msprop:design-time-name="3bcf2abb-08a7-4e72-8108-7dd8b3e632e2" msprop:FriendlyName="Fact_Flights" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Fact_Flights">
+            <xs:element name="dbo_Fact_Flights" msprop:DbSchemaName="dbo" msprop:design-time-name="3bcf2abb-08a7-4e72-8108-7dd8b3e632e2" msprop:FriendlyName="Fact_Flights" msprop:TableType="Table" msprop:DbTableName="Fact_Flights">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Flight_ID" msprop:FriendlyName="Flight_ID" msprop:DbColumnName="Flight_ID" msprop:design-time-name="7cea1563-d0b9-4e8e-bc48-f161fdb447c2" type="xs:int" />
@@ -398,7 +397,7 @@
                   <xs:element name="Is_Cancelled" msprop:FriendlyName="Is_Cancelled" msprop:DbColumnName="Is_Cancelled" msprop:design-time-name="72ddf208-ced0-4edf-a0ad-ca7c5abe8bf3" type="xs:boolean" minOccurs="0" />
                   <xs:element name="Is_Diverted" msprop:FriendlyName="Is_Diverted" msprop:DbColumnName="Is_Diverted" msprop:design-time-name="7f6af8a4-f326-4f85-a97c-a229eccc3a1e" type="xs:boolean" minOccurs="0" />
                   <xs:element name="Status" msprop:FriendlyName="Status" msprop:DbColumnName="Status" msprop:design-time-name="23d8e844-237f-4717-8328-9ca300c9202a" type="xs:int" minOccurs="0" />
-                  <xs:element name="Cancelled_Flag_Numeric" msdata:ReadOnly="true" msprop:Description="" msprop:design-time-name="3a0dcb10-b760-4dde-89df-240d01127e6e" msprop:IsLogical="True" msprop:DbColumnName="Cancelled_Flag_Numeric" msprop:ComputedColumnExpression="CAST(Is_Cancelled AS INT)" type="xs:int" minOccurs="0" />
+                  <xs:element name="Cancelled_Flag_Numeric" msdata:ReadOnly="true" msprop:DbColumnName="Cancelled_Flag_Numeric" msprop:IsLogical="True" msprop:design-time-name="3a0dcb10-b760-4dde-89df-240d01127e6e" msprop:Description="" msprop:ComputedColumnExpression="CAST(Is_Cancelled AS INT)" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -424,25 +423,25 @@
           <xs:selector xpath=".//dbo_Fact_Flights" />
           <xs:field xpath="Flight_ID" />
         </xs:unique>
-        <xs:keyref name="FK__Fact_Flig__Date___440B1D61" refer="dbo_Dim_Date_Constraint1">
+        <xs:keyref name="FK__Fact_Flig__Origi__45F365D3" refer="dbo_Dim_Airport_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Date_Key" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Cance__47DBAE45" refer="dbo_Dim_Reason_Constraint1">
-          <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Cancel_Reason_ID" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Dest___46E78A0C" refer="dbo_Dim_Airport_Constraint1">
-          <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Dest_Airport_ID" />
+          <xs:field xpath="Origin_Airport_ID" />
         </xs:keyref>
         <xs:keyref name="FK__Fact_Flig__Airli__44FF419A" refer="Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
           <xs:field xpath="Airline_ID" />
         </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Origi__45F365D3" refer="dbo_Dim_Airport_Constraint1">
+        <xs:keyref name="FK__Fact_Flig__Dest___46E78A0C" refer="dbo_Dim_Airport_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Origin_Airport_ID" />
+          <xs:field xpath="Dest_Airport_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Flig__Cance__47DBAE45" refer="dbo_Dim_Reason_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Flights" />
+          <xs:field xpath="Cancel_Reason_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Flig__Date___440B1D61" refer="dbo_Dim_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Flights" />
+          <xs:field xpath="Date_Key" />
         </xs:keyref>
       </xs:element>
     </xs:schema>

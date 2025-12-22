@@ -20,20 +20,20 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Airport.dim</Name>
-      <FullPath>Dim Airport.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Airline.dim</Name>
-      <FullPath>Dim Airline.dim</FullPath>
+      <Name>Dim Date.dim</Name>
+      <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Reason.dim</Name>
       <FullPath>Dim Reason.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Date.dim</Name>
-      <FullPath>Dim Date.dim</FullPath>
+      <Name>Dim Airport.dim</Name>
+      <FullPath>Dim Airport.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Airline.dim</Name>
+      <FullPath>Dim Airline.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
