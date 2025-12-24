@@ -1,0 +1,197 @@
+﻿-- ============================================================================
+-- FLIGHT ANALYTICS - MDX QUERY COLLECTION (CORRECTED VERSION)
+-- ============================================================================
+-- Purpose: Core analytical queries for flight operations and performance metrics
+-- Cube: DDS Airline
+-- Last Updated: 2025-01-23
+-- ============================================================================
+
+
+-- ============================================================================
+-- 1. FLIGHT VOLUME ANALYSIS BY TIME PERIODS
+-- ============================================================================
+-- Description: Analyze total flight counts aggregated by different time granularities
+-- Business Use: Trend analysis, capacity planning, seasonal pattern identification
+-- ============================================================================
+
+-- 1.1 Annual Flight Count
+-- Returns: Total flights per calendar year
+SELECT 
+    {[Measures].[Flights Count]} ON COLUMNS,
+    [Dim Date].[Calendar].[Year].Members ON ROWS
+FROM [DDS Airline];
+
+-- ============================================================================
+-- 1.2 Quarterly Flight Count (Hierarchical Approach)
+-- ============================================================================
+-- Returns: Flights by Quarter within Year hierarchy
+-- Shows: All Years → All Quarters under each year
+SELECT 
+    {[Measures].[Flights Count]} ON COLUMNS,
+    [Dim Date].[Calendar].[Quarter].Members ON ROWS
+FROM [DDS Airline];
+
+-- ============================================================================
+-- 1.3 Monthly Flight Count (Hierarchical Approach)
+-- ============================================================================
+-- Returns: Flights by Month within Year→Quarter hierarchy
+-- Shows: All Months across all years
+SELECT 
+    {[Measures].[Flights Count]} ON COLUMNS,
+    [Dim Date].[Calendar].[Month Num].Members ON ROWS
+FROM [DDS Airline];
+
+
+-- ============================================================================
+-- 2. AIRPORT TRAFFIC ANALYSIS - TOP 5 BUSIEST AIRPORTS
+-- ============================================================================
+-- Description: Identify busiest airports by combined traffic (departures + arrivals)
+-- Business Use: Resource allocation, infrastructure planning, hub identification
+-- Traffic Definition: Sum of all departures from airport + all arrivals to airport
+-- ============================================================================
+
+-- ============================================================================
+-- 2. TOP 5 BUSIEST AIRPORTS BY TOTAL TRAFFIC
+-- ============================================================================
+-- Description: Identify busiest airports by combined traffic (departures + arrivals)
+-- Business Use: Resource allocation, infrastructure planning, hub identification
+-- ============================================================================
+
+WITH MEMBER [Measures].[Total Traffic] AS
+    -- Flights departing from this airport (as Origin)
+    [Measures].[Flights Count] +
+    -- Flights arriving to this airport (as Destination)
+    SUM(
+        FILTER(
+            [Dest Airport].[Airport ID].Members,
+            [Dest Airport].[Airport ID].CurrentMember.Name = 
+            [Origin Airport].[Airport ID].CurrentMember.Name
+        ),
+        [Measures].[Flights Count]
+    )
+
+SELECT
+    {[Measures].[Total Traffic]} ON COLUMNS,
+    NON EMPTY TOPCOUNT(
+        [Origin Airport].[Airport ID].Members,
+        5,
+        [Measures].[Total Traffic]
+    ) ON ROWS
+FROM [DDS Airline];
+
+
+-- ============================================================================
+-- 3. ON-TIME PERFORMANCE (OTP) ANALYSIS BY AIRPORT
+-- ============================================================================
+-- Description: Calculate OTP rate (±5 minutes tolerance) by origin airport
+-- Business Use: Service quality monitoring, SLA compliance, airport efficiency
+-- OTP Definition: Arrival delay between -5 and +5 minutes inclusive
+-- ============================================================================
+
+-- 3.1 OTP Rate by Origin Airport
+-- Returns: Percentage of on-time flights per origin airport
+-- Formula: (Count of flights with -5 ≤ Arr Delay ≤ 5) / Total Flights × 100
+-- Note: Uses existing [Measures].[On Time Count] if available
+WITH MEMBER [Measures].[OTP %] AS
+    IIF(
+        [Measures].[Flights Count] = 0,
+        NULL,
+        ([Measures].[On Time Count] / [Measures].[Flights Count])
+    ),
+    FORMAT_STRING = "Percent"
+
+SELECT 
+    {[Measures].[OTP %], [Measures].[On Time Count], [Measures].[Flights Count]} ON COLUMNS,
+    NON EMPTY [Origin Airport].[Airport ID].Members ON ROWS
+FROM [DDS Airline];
+
+
+-- ============================================================================
+-- 4. FLIGHT CANCELLATION ANALYSIS BY REASON
+-- ============================================================================
+-- Description: Analyze cancellation distribution by cancellation reason
+-- Business Use: Operational improvement, cost reduction, root cause analysis
+-- ============================================================================
+
+-- 4.1 Cancellation Rate by Reason (among all cancelled flights)
+-- Returns: Percentage breakdown of cancellation reasons
+-- Formula: (Cancelled flights for this reason / Total cancelled flights) × 100
+-- Filter: Only cancelled flights (Cancelled Flag = 1)
+WITH 
+MEMBER [Measures].[Total Cancelled Flights] AS
+    -- Total cancelled flights across all reasons
+    SUM([Dim Reason].[Reason ID].Members, [Measures].[Sum Cancelled])
+
+MEMBER [Measures].[Cancellation Rate by Reason] AS
+    IIF(
+        [Measures].[Total Cancelled Flights] = 0, 
+        NULL, 
+        [Measures].[Sum Cancelled] / [Measures].[Total Cancelled Flights]
+    ),
+    FORMAT_STRING = "Percent"
+
+SELECT 
+    {[Measures].[Sum Cancelled], [Measures].[Cancellation Rate by Reason]} ON COLUMNS,
+    NON EMPTY [Dim Reason].[Reason ID].Members ON ROWS
+FROM [DDS Airline];
+
+-- 4.2 Alternative: Overall Cancellation Rate by Reason (against total flights)
+-- Returns: What percentage of ALL flights were cancelled for each reason
+-- Formula: (Cancelled flights for this reason / Total flights) × 100
+WITH MEMBER [Measures].[Cancellation Rate vs Total] AS
+    IIF(
+        [Measures].[Flights Count] = 0,
+        NULL,
+        ([Measures].[Sum Cancelled] / [Measures].[Flights Count])
+    ),
+    FORMAT_STRING = "Percent"
+
+SELECT
+    {[Measures].[Sum Cancelled], [Measures].[Cancellation Rate vs Total]} ON COLUMNS,
+    NON EMPTY [Dim Reason].[Reason ID].Members ON ROWS
+FROM [DDS Airline];
+
+
+-- ============================================================================
+-- 5. DELAY PERFORMANCE METRICS BY AIRPORT PAIR
+-- ============================================================================
+-- Description: Calculate average arrival delay by origin-destination airport pairs
+-- Business Use: Route-level delay analysis, operational efficiency improvement
+-- Metric Unit: Minutes
+-- ============================================================================
+
+-- 5.1 Average Arrival Delay by Origin-Destination Airport Pair
+-- Returns: Mean arrival delay (minutes) for each route
+-- Positive values: Delayed arrivals | Negative values: Early arrivals
+-- Formula: Total Arrival Delay / Flight Count
+WITH MEMBER [Measures].[Avg Arrival Delay Route] AS
+    IIF(
+        [Measures].[Flights Count] = 0, 
+        NULL, 
+        [Measures].[Arr Delay] / [Measures].[Flights Count]
+    ),
+    FORMAT_STRING = "#,##0.00"
+
+SELECT 
+    {[Measures].[Avg Arrival Delay Route], [Measures].[Flights Count]} ON COLUMNS,
+    NON EMPTY (
+        [Origin Airport].[Airport ID].Members * 
+        [Dest Airport].[Airport ID].Members
+    ) ON ROWS
+FROM [DDS Airline];
+
+-- 5.2 Average Departure Delay by Origin Airport Only
+-- Returns: Mean departure delay (minutes) per origin airport
+-- Simpler analysis without destination breakdown
+SELECT
+    {[Measures].[Avg Dep Delay], [Measures].[Flights Count]} ON COLUMNS,
+    NON EMPTY [Origin Airport].[Airport ID].Members ON ROWS
+FROM [DDS Airline];
+
+-- 5.3 Average Arrival Delay by Destination Airport Only
+-- Returns: Mean arrival delay (minutes) per destination airport
+-- Useful for identifying airports with landing/gate congestion
+SELECT
+    {[Measures].[Avg Arrival Delay], [Measures].[Flights Count]} ON COLUMNS,
+    NON EMPTY [Dest Airport].[Airport ID].Members ON ROWS
+FROM [DDS Airline];

@@ -35,6 +35,10 @@
       <Name>Dim Airline.dim</Name>
       <FullPath>Dim Airline.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Flights.dim</Name>
+      <FullPath>Fact Flights.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
