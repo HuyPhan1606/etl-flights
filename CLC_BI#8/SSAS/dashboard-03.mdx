@@ -1,0 +1,45 @@
+﻿-- Tổng số chuyến bay, OTP toàn ngành.
+SELECT 
+    {[Measures].[Fact Flights Count], [Measures].[OTP Percentage]} ON COLUMNS
+FROM [DDS Airline];
+
+
+-- Tỉ lệ chuyến bị hủy, tỉ lệ delay > 15 phút.
+SELECT 
+    {[Measures].[Cancellation Rate], [Measures].[Delay Rate > 15m]} ON COLUMNS
+FROM [DDS Airline];
+
+
+-- Top 5 hãng hàng không theo OTP.
+SELECT 
+    {[Measures].[OTP %]} ON COLUMNS,
+    TOPCOUNT(
+        [Dim Airline].[Airline Name].[Airline Name].Members, 
+        5, 
+        [Measures].[OTP %]
+    ) ON ROWS
+FROM [DDS Airline];
+
+
+-- Top 5 sân bay có tỉ lệ delay cao nhất
+SELECT 
+    {[Measures].[Fact Flights Count], [Measures].[Delayed Flights Count], [Measures].[Total Delay Rate]} ON COLUMNS,
+    TOPCOUNT(
+        [Origin Airport].[Airport Name].[Airport Name].Members, 
+        5, 
+        [Measures].[Total Delay Rate]
+    ) ON ROWS
+FROM [DDS Airline];
+
+
+
+-- Xu hướng số chuyến bay theo tháng/quý.
+SELECT 
+    {[Measures].[Fact Flights Count]} ON COLUMNS,
+    NON EMPTY (
+        [Dim Date].[Year].[Year].Members * [Dim Date].[Quarter].[Quarter].Members * [Dim Date].[Month Name].[Month Name].Members
+    ) ON ROWS
+FROM [DDS Airline];
+
+
+

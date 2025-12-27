@@ -1,0 +1,24 @@
+﻿-- tổng số chuyến bay đi và đến
+SELECT 
+    { [Measures].[Fact Flights Count], [Measures].[Arriving Flights] } ON COLUMNS,
+    NON EMPTY { [Origin Airport].[Airport Name].MEMBERS } ON ROWS
+FROM [DDS Airline];
+
+ -- Thời gian Taxi In/Out trung bình
+SELECT 
+    { [Measures].[Avg Taxi In], [Measures].[Avg Taxi Out] } ON COLUMNS,
+    NON EMPTY { [Origin Airport].[Airport Name].MEMBERS } ON ROWS
+FROM [DDS Airline];
+
+-- Tỉ lệ trễ/hủy theo Vị trí Sân bay
+SELECT 
+    { [Measures].[Total Delay Rate], [Measures].[Cancellation Rate] } ON COLUMNS,
+    NON EMPTY { [Origin Airport].[State].MEMBERS } ON ROWS
+FROM [DDS Airline];
+
+ -- Xu hướng thời gian Taxi trung bình theo Quý
+SELECT 
+    { [Measures].[Avg Total Taxi] } ON COLUMNS,
+    NON EMPTY { [Dim Date].[Year].MEMBERS * [Dim Date].[Quarter].MEMBERS } ON ROWS
+FROM [DDS Airline];
+

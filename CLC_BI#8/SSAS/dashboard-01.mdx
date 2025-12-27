@@ -1,0 +1,18 @@
+﻿-- So sánh OTP và Thời gian trễ (Khởi hành/Đến) trung bình theo hãng
+SELECT 
+    { [Measures].[OTP %], [Measures].[Avg Dep Delay], [Measures].[Avg Arr Delay] } ON COLUMNS,
+    NON EMPTY { [Dim Airline].[Airline Name].MEMBERS } ON ROWS
+FROM [DDS Airline];
+
+-- Tỉ lệ chuyến bay bị hủy theo từng hãng
+SELECT 
+    { [Measures].[Fact Flights Count], [Measures].[Cancellation Rate] } ON COLUMNS,
+    NON EMPTY { [Dim Airline].[Airline Name].MEMBERS } ON ROWS
+FROM [DDS Airline];
+
+-- Xu hướng hiệu suất OTP theo tháng của hãng được chọn
+SELECT 
+    { [Measures].[OTP %] } ON COLUMNS,
+    NON EMPTY { [Dim Date].[Month Name].MEMBERS } ON ROWS
+FROM [DDS Airline]
+WHERE ( [Dim Airline].[Airline Name].&[American Airlines Inc.] );
