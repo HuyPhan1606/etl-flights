@@ -1,0 +1,30 @@
+﻿-- Tỉ lệ chuyến bay bị chuyển hướng (Diverted Rate) toàn mạng lưới.
+SELECT 
+    {[Measures].[Fact Flights Count], [Measures].[Diverted Count], [Measures].[Diverted Rate]} ON COLUMNS
+FROM [DDS Airline];
+
+
+-- Chỉ số "Chuyến bay chậm nghiêm trọng" (Tỉ lệ chuyến delay > 120 phút)
+SELECT 
+    {[Measures].[Fact Flights Count], [Measures].[Serious Delay Count], [Measures].[Serious Delay Rate]} ON COLUMNS
+FROM [DDS Airline];
+
+-- Top 5 sân bay đích có số lượng chuyến bay bị chuyển hướng nhiều nhất.
+SELECT 
+    {[Measures].[Diverted Count]} ON COLUMNS,
+    TOPCOUNT(
+        [Dest Airport].[Airport Name].[Airport Name].Members, 
+        5, 
+        [Measures].[Diverted Count]
+    ) ON ROWS
+FROM [DDS Airline];
+
+
+-- Biến động các sự cố rủi ro theo từng Quý.
+SELECT 
+    {[Measures].[Sum Cancelled], [Measures].[Diverted Count]} ON COLUMNS,
+    NON EMPTY (
+        [Dim Date].[Year].[Year].Members * [Dim Date].[Quarter].[Quarter].Members
+    ) ON ROWS
+FROM [DDS Airline];
+
