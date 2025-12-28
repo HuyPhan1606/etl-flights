@@ -24,7 +24,6 @@ FROM [DDS Airline];
 SELECT 
     {[Measures].[Sum Cancelled], [Measures].[Diverted Count]} ON COLUMNS,
     NON EMPTY (
-        [Dim Date].[Year].[Year].Members * [Dim Date].[Quarter].[Quarter].Members
+        [Dim Date].[Year].[Year].Members * [Dim Date].[Quarter].[Quarter].Members * [Dim Date].[Month Name].[Month Name].Members
     ) ON ROWS
 FROM [DDS Airline];
-
