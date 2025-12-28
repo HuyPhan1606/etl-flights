@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c49d8bb2-f434-411f-9613-8bd19c0f6327" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0bbf8e0d-20e9-4961-ba25-c446f1ea95dc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DDS Airline 1</ID>
   <Name>DDS Airline</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4983" scrolltop="-3488" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="25241" y="21802" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4983" scrolltop="-1975" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="25241" y="21802" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -185,7 +185,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-3488</Value>
+      <Value>-1975</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -203,125 +203,125 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="a10dc96c-c3d6-4fda-9c7e-0c7ef3c61559">
+    <Dimension dwd:design-time-name="906d40fb-521f-4207-a26d-36f6bf0d4ad5">
       <ID>Fact Flights</ID>
       <Name>Fact Flights</Name>
       <DimensionID>Fact Flights</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="e1f48b56-ab2b-4c8e-99d8-70d21f8e1aa4">
+        <Attribute dwd:design-time-name="04680935-18c9-4625-b453-2d7bdee5e59f">
           <AttributeID>Flight ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="8c528587-8e98-498f-8292-764e4d945df9">
+        <Attribute dwd:design-time-name="a20bc1cb-9cc7-4936-a5f0-3aaa1c706e0f">
           <AttributeID>Origin Airport ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="e0f1ca17-41e2-4f85-8795-ef5e8fcb95b0">
+        <Attribute dwd:design-time-name="d3ea467c-4625-47d5-9d8b-a830847a032b">
           <AttributeID>Airline ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="ac37d178-e9e0-4074-8b45-c370ead26081">
+        <Attribute dwd:design-time-name="7dc30d0a-1b84-46fc-b25b-ff5a31987549">
           <AttributeID>Dest Airport ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="41434d99-b9da-4908-b099-5a60165aa840">
+        <Attribute dwd:design-time-name="db3e6d60-d1a5-4037-b87f-6eeab304d1e4">
           <AttributeID>Cancel Reason ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="8d2c06a6-3525-49f5-9f7a-a476950978b9">
+        <Attribute dwd:design-time-name="9ac4e65f-7940-4b04-8fcd-51a1cd28933f">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="eff6fd77-0f7d-40ca-beea-a6b60234bd6f">
+        <Attribute dwd:design-time-name="30f6aa6c-0eaf-4c08-9387-f476519a656e">
           <AttributeID>Is Cancelled</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="ca22b52e-eb6d-4877-ae21-53e2f866b733">
+        <Attribute dwd:design-time-name="8e0779eb-052e-43d8-bbe7-1c7c655c0077">
           <AttributeID>Is Diverted</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="3a5b4b82-409e-44dc-8ff9-c0fc68d520d2">
+    <Dimension dwd:design-time-name="0c5cdc9d-dc95-4cc7-8b39-3c57484df285">
       <ID>Origin Airport</ID>
       <Name>Origin Airport</Name>
       <DimensionID>Dim Airport</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="d082e063-6d69-487a-8b6b-aae6a4e2440e">
+        <Attribute dwd:design-time-name="c2f39d70-5f95-4f4e-b41d-b26f391fca1f">
           <AttributeID>Airport ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="60ed2749-a2af-418f-a200-b26588cd71aa">
+        <Attribute dwd:design-time-name="49582ed4-2169-41c7-aca0-dd43de62a884">
           <AttributeID>Airport Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b64bb20b-42fa-4cde-8e03-2409507cdef9">
+        <Attribute dwd:design-time-name="f482fac3-2eb7-437c-96ea-bd881cb01503">
           <AttributeID>State</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="c63f2c4e-4e0e-42f6-b6d0-5cfd37ecfe73">
+    <Dimension dwd:design-time-name="226b004c-dbb7-47ad-87a9-c43bdd2c857a">
       <ID>Dim Airline</ID>
       <Name>Dim Airline</Name>
       <DimensionID>Dim Airline</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="f2cac7da-fe9b-4246-8b73-6f1b656e03bc">
+        <Attribute dwd:design-time-name="168fd933-1075-408b-8eac-e8bae8cd524c">
           <AttributeID>Airline ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="71b2202d-ade3-4327-9c90-026b97d5f5dd">
+        <Attribute dwd:design-time-name="fcda08c8-a5df-46ea-98c7-b57099ff1793">
           <AttributeID>Airline Name</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="2e06c552-1840-4a61-bc63-a8941b761dba">
+    <Dimension dwd:design-time-name="c5554d6c-fafc-427b-b73a-41ef1e09fadb">
       <ID>Dest Airport</ID>
       <Name>Dest Airport</Name>
       <DimensionID>Dim Airport</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="21ea8739-f1bb-4e95-b82a-213f873d9b77">
+        <Attribute dwd:design-time-name="0d6513bd-2f5e-44c8-b4d5-36509e273697">
           <AttributeID>Airport ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="db828452-0ee2-48aa-9738-c2e223510609">
+        <Attribute dwd:design-time-name="4e061522-7494-4956-adca-252b1d44ce1b">
           <AttributeID>Airport Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="14269d57-717d-41ff-869f-2cf142a3a8c2">
+        <Attribute dwd:design-time-name="e6da5eb9-ad3c-4032-ae3a-5b7ca889df7b">
           <AttributeID>State</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="3b1c8646-aa98-41e6-839c-656b109278ae">
+    <Dimension dwd:design-time-name="201e1b20-0cc6-48b9-8020-d1ad28b5e370">
       <ID>Dim Date</ID>
       <Name>Dim Date</Name>
       <DimensionID>Dim Date</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="5744e7f8-7ee1-48be-ba30-8bc33b4dbe80">
+        <Attribute dwd:design-time-name="748a40ec-35dc-400d-9e1e-1af0b7ab4286">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="f0c2d0ef-e94b-41fb-8b80-1f77093aa355">
+        <Attribute dwd:design-time-name="71e03b73-ddf8-4999-820c-8b26450a29f5">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="50d9c615-7fff-45e4-a1f9-8b722129d5cb">
+        <Attribute dwd:design-time-name="b6463199-4c60-49c1-aceb-810256d9378c">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="bbcac25b-13ee-4065-b6ba-5b3d732dff08">
+        <Attribute dwd:design-time-name="9cf76b29-bc1e-4917-a08f-cbf8527d8301">
           <AttributeID>Full Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="2fc0e408-abcf-4390-a320-9729f97475b7">
+        <Attribute dwd:design-time-name="bfadfba7-8c4f-45ee-9720-65249fb8d7cd">
           <AttributeID>Month Num</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="8ed74757-2505-42ca-8a8f-c1f2c508e8ab">
+        <Attribute dwd:design-time-name="c1ff6137-ad67-4187-aa15-b7b4a7395452">
           <AttributeID>Month Name</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="503c4ba7-cee5-476d-8b01-8632e432ef83">
+        <Hierarchy dwd:design-time-name="92b1b0d7-6d01-4e79-8940-37c4e0d8057d">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="04d5846e-0b2e-49e1-a5ce-2ad30676ea6e">
+    <Dimension dwd:design-time-name="c80cfa81-bf80-47b8-aecd-16889ca3f70a">
       <ID>Dim Reason</ID>
       <Name>Dim Reason</Name>
       <DimensionID>Dim Reason</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="b5782983-77da-4658-8612-47ecad258161">
+        <Attribute dwd:design-time-name="c9076dd7-933b-454a-baf8-87c3df104cd5">
           <AttributeID>Reason ID</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="00592bc6-8cc5-4932-849f-e37d679c1879">
+    <MeasureGroup dwd:design-time-name="ed115e4f-deed-44fa-8363-3793cb48aefc">
       <ID>Fact Flights</ID>
       <Name>Fact Flights</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -329,255 +329,255 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="64a9ea81-9635-4682-be97-dfe6549acfab">
+        <Measure dwd:design-time-name="a858b05d-3ea9-4ab3-9633-2e79304da308">
           <ID>Scheduled Arrival</ID>
           <Name>Scheduled Arrival</Name>
-          <Source dwd:design-time-name="5a8a8a21-8177-4bb2-9494-cd847ae3e894">
+          <Source dwd:design-time-name="e3938d14-7d14-4a5f-a161-085e63490bf9">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="276bc11b-980e-40fc-ba92-7708c6e43a62">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="33bca0eb-23fe-429b-8ffc-95e4092f0da8">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Scheduled_Arrival</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="eaa3c804-bf69-465f-a8e1-1a7444a2e788">
+        <Measure dwd:design-time-name="5f9b1044-7b07-461b-b6f6-0f1aca8960e1">
           <ID>Arrival Time</ID>
           <Name>Arrival Time</Name>
-          <Source dwd:design-time-name="15f443c5-da92-4e84-ba22-49fcf1d0ece3">
+          <Source dwd:design-time-name="f9929cc3-e941-418c-85ed-39f7da61eea5">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="b78bde3d-b047-4e1d-8965-bfacdfe4f8ed">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4276530c-c58d-4592-b45d-37404b0aaf91">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Arrival_Time</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="9046f7fc-4a33-4abe-bf03-38e95e4a8a0d">
+        <Measure dwd:design-time-name="7b5d40e6-0c5c-4432-8c42-4f3e90d86f29">
           <ID>Wheels Off</ID>
           <Name>Wheels Off</Name>
-          <Source dwd:design-time-name="1bb0bf4b-5358-4cb1-bbaa-e1db8112edad">
+          <Source dwd:design-time-name="a4d7790e-08d5-478e-b0eb-d9fae2caa7c7">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="2a8b7305-3e25-4b62-b126-93e535e42719">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e7c0db51-5ce4-4d1c-844b-fb88ab3ee230">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Wheels_Off</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="f42cba97-ae45-4cb2-aa96-2de6ff0e1b2a">
+        <Measure dwd:design-time-name="cd3fb85b-f8db-4f72-83bd-54781141c42f">
           <ID>Wheels On</ID>
           <Name>Wheels On</Name>
-          <Source dwd:design-time-name="bf0ca210-c0a9-444b-8f0d-9e1592c42df7">
+          <Source dwd:design-time-name="48bd5999-bb2e-4939-bfd9-603c3ca9292e">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="ce4f807a-695d-4699-82e2-4158b9115f03">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="679002d0-310a-4364-bb62-cdcf353fcd94">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Wheels_On</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="bbe291b0-230b-411b-a21b-91ea6dc0fe73">
+        <Measure dwd:design-time-name="63ed5b7c-a954-4794-ac87-f9c353193585">
           <ID>Dep Delay</ID>
           <Name>Dep Delay</Name>
-          <Source dwd:design-time-name="320b465d-79d1-4eae-ab95-d346ee15674c">
+          <Source dwd:design-time-name="6ece8552-fa37-4c78-b18e-6bc22a098acc">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="90ad4c08-c490-4149-9029-9223dfc047e3">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e3a262d0-2583-43e1-a7ee-58c8f4455695">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Dep_Delay</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="642c1831-6bab-4f80-be95-2ca49f8093b0">
+        <Measure dwd:design-time-name="567bdb2c-7784-4fc4-9a41-79cf59ff323d">
           <ID>Arr Delay</ID>
           <Name>Arr Delay</Name>
-          <Source dwd:design-time-name="0429d54c-ffc0-4c11-a07a-57e60a44e232">
+          <Source dwd:design-time-name="f7f56a9f-cf08-4ed5-bfab-e86cf10760a0">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="7efd323d-3797-497c-99c7-7c050201e647">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ef577083-2394-479b-8b86-502fa4e18cea">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Arr_Delay</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="e638428a-64c8-46ee-873f-7ac7d3ef0281">
+        <Measure dwd:design-time-name="167580f1-fb85-4598-b01e-16a37fc7b3fe">
           <ID>Air Time</ID>
           <Name>Air Time</Name>
-          <Source dwd:design-time-name="a956d25d-1f05-4ec6-b2b6-4f1ac63b60d7">
+          <Source dwd:design-time-name="04b100e8-6ec3-4283-801e-d5211fd45d01">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="acc7546a-c385-459d-b569-065fdfb8e1e2">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6ba72d78-2511-46eb-abf9-bc998ca358a4">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Air_Time</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="c08a3199-2b6b-4127-b960-785349ef483d">
+        <Measure dwd:design-time-name="67495848-8c61-4b39-946b-63dcaf9f0259">
           <ID>Distance</ID>
           <Name>Distance</Name>
-          <Source dwd:design-time-name="68a98042-29d4-44df-ae17-ebec32253fb1">
+          <Source dwd:design-time-name="431af7af-1b07-4e52-ab73-99ad5ff32310">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="192c3c6c-617b-4962-9d2d-9c13b358e489">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e75e417-e393-4b8a-8d46-0d587874706a">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Distance</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="534b41a9-7047-4613-b309-fd7f2a3f3ee7">
+        <Measure dwd:design-time-name="a901cfc3-86e2-4ff8-9419-e9e265f90d6b">
           <ID>Taxi Out</ID>
           <Name>Taxi Out</Name>
-          <Source dwd:design-time-name="2c32e3d3-b90f-4ad6-9dff-1c17b06ffc57">
+          <Source dwd:design-time-name="b1c4612f-b549-49b1-b213-c792f07b42c4">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="020cca21-aa60-4a42-8e29-d30092ecd983">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3738280e-2843-4542-84f7-10012caf52bb">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Taxi_Out</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="ca86a9c4-af4b-42a1-9c34-768b215009c1">
+        <Measure dwd:design-time-name="1e0be781-32c4-4408-8690-c5fbe1d87bbd">
           <ID>Taxi In</ID>
           <Name>Taxi In</Name>
-          <Source dwd:design-time-name="f7c97967-73db-4430-b78d-1fd6d2d1ad41">
+          <Source dwd:design-time-name="102667be-6729-4450-a8d6-87dc56c16223">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="41ff39ab-ad74-4d2d-b610-629ab29c39df">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="741f091b-5ce4-41c8-8f1e-727f6710e379">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Taxi_In</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="1ea8f17b-6597-4dd2-9e8d-1e7e4b4d454b">
+        <Measure dwd:design-time-name="ad6a5225-ced0-42bb-9642-252e1f129f1c">
           <ID>Scheduled Time</ID>
           <Name>Scheduled Time</Name>
-          <Source dwd:design-time-name="71b7551a-eaf6-414e-9a11-18d13bb32f79">
+          <Source dwd:design-time-name="336c16f3-3aff-4e8b-bb34-42bef81629d1">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="31cf9582-59be-4dca-82cc-8370c851f0de">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="36c5107b-78fc-49f0-ad51-0b08ea7638a4">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Scheduled_Time</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="32dad3f7-84a7-4aeb-82fc-4af7ca13086a">
+        <Measure dwd:design-time-name="1b9a2129-451d-4d21-9110-1d2fff011bcd">
           <ID>Elapsed Time</ID>
           <Name>Elapsed Time</Name>
-          <Source dwd:design-time-name="0aeadb8b-f81f-4761-a7b7-6c637743c92f">
+          <Source dwd:design-time-name="703492fb-e2af-4845-b339-52a973077855">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="469dc63b-c362-43d3-a884-cbd207a6f341">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b7ddeaee-2112-432b-a65b-8da965d2ca6b">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Elapsed_Time</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="863d6955-3ba2-446d-b37e-0e6289326b4c">
+        <Measure dwd:design-time-name="c5704f3e-dd86-4342-bfaf-bbfc15a777eb">
           <ID>Delay System</ID>
           <Name>Delay System</Name>
-          <Source dwd:design-time-name="53ce97a2-f845-4da4-8d2c-0fe97c3a7f84">
+          <Source dwd:design-time-name="9dd496dc-c438-447d-9652-d84967130d90">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="b54fc92e-4ac6-45a5-b08d-c8e6c97cdd20">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="aa54acba-6ae2-4e9c-b463-2277df33b9df">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Delay_System</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="20812692-37fe-4f8d-beef-c3a9fbcfe071">
+        <Measure dwd:design-time-name="7500d01c-ec1f-4f30-b842-226cb4e5c86d">
           <ID>Delay Security</ID>
           <Name>Delay Security</Name>
-          <Source dwd:design-time-name="d7e814a3-b974-4a75-a6e7-f29245f87776">
+          <Source dwd:design-time-name="f7e9d22b-0758-4e15-870d-e5c00677d47f">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="d9e80312-0b8a-47c7-b409-e4019ab16e83">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f199d076-a807-433a-a16a-ce39cdcf6794">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Delay_Security</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="38ae7d84-78a7-4526-b9a4-f81d1a234fd9">
+        <Measure dwd:design-time-name="5dd26481-9286-42ba-9dd4-ce21ed028dbf">
           <ID>Delay Airline</ID>
           <Name>Delay Airline</Name>
-          <Source dwd:design-time-name="79a852d7-8786-4d09-b932-7f35ae79ac15">
+          <Source dwd:design-time-name="f66507cd-d128-43f7-b9a4-af303b36f1a5">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="24b289f0-d67b-4390-a18b-4b8bdbe4bce8">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c244f3ab-7619-4b04-863e-2ab36f792d6e">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Delay_Airline</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="0f9aff2a-1c2d-4ca3-9174-ffd2e9d659c5">
+        <Measure dwd:design-time-name="74341929-d83e-425b-b052-5da137935e69">
           <ID>Delay Weather</ID>
           <Name>Delay Weather</Name>
-          <Source dwd:design-time-name="785981dd-f0cf-4e57-ad4e-120ad5be07d9">
+          <Source dwd:design-time-name="6feb9564-7c09-4ac2-a356-fa72bfd4e9f6">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="73a675a6-a280-4e4f-babb-d0aee02290c2">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b2641a98-4d28-409c-9d42-937fc1c8a69f">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Delay_Weather</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="4b1eda5b-19c2-41ee-818c-6e995418ddf1">
+        <Measure dwd:design-time-name="aabba088-de7e-4713-a87f-2110b6c1e774">
           <ID>Delay Late Aircraft</ID>
           <Name>Delay Late Aircraft</Name>
-          <Source dwd:design-time-name="0880bdbc-8278-4f71-8f5f-f38ff4b75e4f">
+          <Source dwd:design-time-name="cd5a14ab-e2fc-4ab9-8dfa-0780e76d67df">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="ecb3777c-8234-405a-8798-b0f3ce41e16f">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2243530e-76ab-4977-bddf-5daca0fb4938">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Delay_LateAircraft</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="740a92e1-bfa4-4cda-9f74-635a6d5bbac4">
+        <Measure dwd:design-time-name="938af33b-186d-481e-a189-c08ffa24c302">
           <ID>Status</ID>
           <Name>Status</Name>
-          <Source dwd:design-time-name="a01046a0-bf55-423e-af38-d68786d6c758">
+          <Source dwd:design-time-name="68c5b5e4-8299-4c33-bb6f-346d72d2e75b">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="ba143ca7-2ef4-4bb9-b031-3c94afe54f01">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fe405a45-9b70-481e-a9a2-8eadf409056c">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Status</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="4bb5e911-7f4d-41e6-8366-6e8639cf5923">
+        <Measure dwd:design-time-name="71dd67c5-48c4-4c22-919b-3b95ad7dd95e">
           <ID>Cancelled Flag Numeric</ID>
           <Name>Cancelled Flag Numeric</Name>
-          <Source dwd:design-time-name="d5c7f7d3-89db-4f78-af0c-803e5f008a9d">
+          <Source dwd:design-time-name="233b171a-dc91-444c-9a62-50b389702cfc">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="e03357e7-1a3e-46e5-ac28-33df06d3b056">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3d4f3669-05b3-4d19-b3eb-7b3798a13643">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Cancelled_Flag_Numeric</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="a0b09501-4508-4ee0-8509-83e3b1bdba3f">
+        <Measure dwd:design-time-name="56a79c13-1991-41e3-a94b-7999b2565a04">
           <ID>Fact Flights Count</ID>
           <Name>Fact Flights Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="a87f5aee-5354-4857-a952-326493d3f425">
+          <Source dwd:design-time-name="6c82bafd-7433-4eb5-abe6-20a4852c1b21">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="415a99a7-ef2d-4cc4-9e02-2c2026ff5464">
+            <Source xsi:type="RowBinding" dwd:design-time-name="aea7efbb-05c7-4374-9150-bc9c1161ff08">
               <TableID>dbo_Fact_Flights</TableID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="97fb49fd-fd93-4a11-beb9-1ac850d25b04">
+        <Measure dwd:design-time-name="347e724a-697f-4d3b-8c8f-8415af1b1a55">
           <ID>Arr Delay - Fact Flights</ID>
           <Name>Sum Arr Delay</Name>
-          <Source dwd:design-time-name="a54f5bbc-a1b1-4ff1-963c-e950beccc8e7">
+          <Source dwd:design-time-name="d8add0b6-5a6a-41de-93bd-bd9a9b5c6dc9">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="31ddb920-a5a6-47de-8a5e-f2dc4723ebff">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4f21d5c0-668d-4dd0-b565-d8b75faffb1f">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Arr_Delay</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="67457b20-5cf2-4873-953b-5e5a3f65e44b">
+        <Measure dwd:design-time-name="07d4dcc5-a7b7-49e0-9ec2-49f56aad7790">
           <ID>Cancelled Flag Numeric - Fact Flights</ID>
           <Name>Sum Cancelled</Name>
-          <Source dwd:design-time-name="8ded1d82-df0e-481d-a9df-3ccf718b9feb">
+          <Source dwd:design-time-name="6234b1fb-4017-483b-82f8-6399e9f7b025">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="9da8e14e-8f2a-4f10-aa35-e5de6034d1d0">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cbb7b894-7be7-401e-b6eb-29c41bd68bf1">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Cancelled_Flag_Numeric</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="19f3e7f7-2a02-45ec-a9f7-58bbf507400d">
+        <Measure dwd:design-time-name="c969e94a-5b3a-4697-9199-ac421d12595c">
           <ID>Dep Delay - Fact Flights</ID>
           <Name>Sum Dep Delay</Name>
-          <Source dwd:design-time-name="b11a06eb-a32a-4ad3-8e07-bd9b957004d2">
+          <Source dwd:design-time-name="db628ca5-fb25-450b-81aa-851e5f8090c2">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="eecaa5f3-c6c9-4e28-a686-47c757de7132">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ce8f1ebf-0848-4d27-924b-d4b71e662140">
               <TableID>dbo_Fact_Flights</TableID>
               <ColumnID>Dep_Delay</ColumnID>
             </Source>
@@ -587,15 +587,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="da6207d0-d0b4-497d-936a-8967ed59bd91">
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="7ad28778-9b42-4474-8ce1-555de1fb1944">
           <CubeDimensionID>Fact Flights</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="4aa6ddcb-ed69-4ce0-beba-10983e700155">
+            <Attribute dwd:design-time-name="9dcb46f6-b3dd-4b6a-9caf-9048420e34fa">
               <AttributeID>Flight ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="deb05f41-c6d4-4b0b-a265-3d4610f1fb18">
+                <KeyColumn dwd:design-time-name="9bf2fdc6-f5d8-4f67-9d6f-a87919246767">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="41330ddf-9152-4b43-ba73-40c594e2c7eb">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ca09c612-eaa7-4592-a8db-e50e1ddf7f4d">
                     <TableID>dbo_Fact_Flights</TableID>
                     <ColumnID>Flight_ID</ColumnID>
                   </Source>
@@ -605,16 +605,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0076869a-cd1f-444c-aae6-94cbba47c405">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="741cca5b-c6bc-4129-ba76-a990036b64ba">
           <CubeDimensionID>Origin Airport</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="cd225b0c-88a0-4419-b06b-9aa777cef7cc">
+            <Attribute dwd:design-time-name="f893aa70-4e5c-404c-8e29-cba59f0cac3e">
               <AttributeID>Airport ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="cd8261d2-e54e-4917-949b-43f9f30c2048">
+                <KeyColumn dwd:design-time-name="aecb2dfa-77b6-4c6e-9beb-fc24a8e29a80">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4344ea6e-9f2d-4b56-825c-68790199303a">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5c8eb00b-637b-4399-87b0-8acd9473eb23">
                     <TableID>dbo_Fact_Flights</TableID>
                     <ColumnID>Origin_Airport_ID</ColumnID>
                   </Source>
@@ -624,16 +624,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d70d1be4-5b44-44e2-a605-267037337d60">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d29ea13b-4a8f-4f3b-a307-9317421d6ec8">
           <CubeDimensionID>Dim Airline</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="2b1d151b-8fc8-4fe8-8a32-5e1e9d417fa5">
+            <Attribute dwd:design-time-name="9c6521cd-c479-4a4d-a383-22b84f283dcc">
               <AttributeID>Airline ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="3d5a2213-3062-49d8-9e8b-107e3f258177">
+                <KeyColumn dwd:design-time-name="97b1610d-71b5-4407-ac3a-c780fad9d64b">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3e6c96e6-97c2-47cd-912e-2af16be683c5">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9fb63d86-ceca-4d9d-a7cb-59cea39530a8">
                     <TableID>dbo_Fact_Flights</TableID>
                     <ColumnID>Airline_ID</ColumnID>
                   </Source>
@@ -643,16 +643,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d6ae2be5-5786-4001-9c35-bf28963f01f1">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0d87e106-c3ab-41cb-b69f-c8e107e6c564">
           <CubeDimensionID>Dest Airport</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="8d6ecfab-d395-4243-bb08-be3522f051a8">
+            <Attribute dwd:design-time-name="5e7bb72d-eddf-481a-b4a0-01d529e0ca9a">
               <AttributeID>Airport ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="925b90f8-b1b0-4895-8cbb-42587a326d6c">
+                <KeyColumn dwd:design-time-name="3497e4e4-3aba-4550-a9fa-e7d42bfce5dc">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="93f5e36d-0664-4f78-96c1-002d02a08151">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="24e71a59-3f91-45c2-a2a8-4b6ba53a004f">
                     <TableID>dbo_Fact_Flights</TableID>
                     <ColumnID>Dest_Airport_ID</ColumnID>
                   </Source>
@@ -662,17 +662,17 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2718d1ce-3eda-48f3-b3f0-14840453d7f8">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a0c6bf71-d26c-47e7-ac7d-66a41e2482e8">
           <CubeDimensionID>Dim Reason</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="f1b162a3-8bb9-46b2-8462-0bc5a8a15376">
+            <Attribute dwd:design-time-name="8e64d3e2-e3a2-4e7c-bfa7-a7f4ea544fc0">
               <AttributeID>Reason ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="03c95cac-0836-40de-8317-7449cd586d1f">
+                <KeyColumn dwd:design-time-name="e600ec5b-e389-4b79-8737-cdcdad90932b">
                   <DataType>WChar</DataType>
                   <DataSize>1</DataSize>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cf75a9db-a49f-44b3-888b-26e5f3d2f8db">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a6039b7b-3232-4a56-810d-c5ec519db3e3">
                     <TableID>dbo_Fact_Flights</TableID>
                     <ColumnID>Cancel_Reason_ID</ColumnID>
                   </Source>
@@ -682,16 +682,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="86483add-2d16-4d3e-a9b1-592884e11628">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ebaf93cc-2d30-49f5-8fb4-b05f9fa0b5d3">
           <CubeDimensionID>Dim Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="447a3e94-a152-4461-98f2-ee46e6a1706f">
+            <Attribute dwd:design-time-name="377af874-34a4-4585-a817-2ef86f6881ff">
               <AttributeID>Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="dfbc560a-2f10-42b4-a1bb-d04930a012bb">
+                <KeyColumn dwd:design-time-name="1df52af3-9812-4ab6-800e-b8aa5a4ec134">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="54f69eb5-19ab-4e06-bba0-83659d32998f">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e972d40b-3124-4199-8012-e8f91484feee">
                     <TableID>dbo_Fact_Flights</TableID>
                     <ColumnID>Date_Key</ColumnID>
                   </Source>
@@ -705,11 +705,11 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="c5ff0949-dcd4-49be-843b-457c7219790a">
+  <Source dwd:design-time-name="d7f36b26-e486-4e55-815f-860949900cfc">
     <DataSourceViewID>DDS Airline</DataSourceViewID>
   </Source>
   <MdxScripts>
-    <MdxScript dwd:design-time-name="b7ecbcd6-3d51-4992-917d-6efe8514e59e">
+    <MdxScript dwd:design-time-name="ee4f7691-5534-45e2-858e-7dc10aa7b79c">
       <ID>MdxScript</ID>
       <Name>MdxScript</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -969,7 +969,57 @@ AS
     ), 
     FORMAT_STRING = "Percent",
     VISIBLE = 1,
-    DISPLAY_FOLDER = 'Risk Metrics\Delays';</Text>
+    DISPLAY_FOLDER = 'Risk Metrics\Delays';
+
+
+-- =====================================================
+-- CALENDAR HIERARCHY DISPLAY MEMBERS
+-- =====================================================
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Year]
+AS 
+    [Dim Date].[Calendar].CurrentMember.Parent.Parent.Parent.Name,
+VISIBLE = 1,
+DISPLAY_FOLDER = 'Calendar Display';
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Quarter]
+AS 
+    [Dim Date].[Calendar].CurrentMember.Parent.Parent.Name,
+VISIBLE = 1,
+DISPLAY_FOLDER = 'Calendar Display';
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Month Name]
+AS 
+    [Dim Date].[Calendar].CurrentMember.Parent.Name,
+VISIBLE = 1,
+DISPLAY_FOLDER = 'Calendar Display';
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Month Number]
+AS 
+    [Dim Date].[Calendar].CurrentMember.Name,
+VISIBLE = 1,
+DISPLAY_FOLDER = 'Calendar Display';
+
+-- For Quarter Level (mới thêm)
+CREATE MEMBER CURRENTCUBE.[Measures].[Year For Quarter]
+AS 
+    IIF(
+        [Dim Date].[Calendar].CurrentMember.Level.Ordinal &gt;= 1,
+        ANCESTOR([Dim Date].[Calendar].CurrentMember, [Dim Date].[Calendar].[Year]).Name,
+        NULL
+    ),
+VISIBLE = 1,
+DISPLAY_FOLDER = 'Calendar Display';
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Quarter Display]
+AS 
+    IIF(
+        [Dim Date].[Calendar].CurrentMember.Level.Ordinal &gt;= 2,
+        [Dim Date].[Calendar].CurrentMember.Name,
+        NULL
+    ),
+VISIBLE = 1,
+DISPLAY_FOLDER = 'Calendar Display';</Text>
         </Command>
       </Commands>
     </MdxScript>

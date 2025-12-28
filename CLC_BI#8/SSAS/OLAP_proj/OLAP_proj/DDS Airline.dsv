@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c7de6af7-e1ea-4c51-861d-f6b263a55ea7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="94732a98-d8d3-4fb0-9d60-9c45d2437dfe" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DDS Airline</ID>
   <Name>DDS Airline</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5551" scrolltop="-3298" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="25876" y="23125" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5551" scrolltop="-3298" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="27040" y="23125" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -398,6 +398,7 @@
                   <xs:element name="Is_Diverted" msprop:FriendlyName="Is_Diverted" msprop:DbColumnName="Is_Diverted" msprop:design-time-name="7f6af8a4-f326-4f85-a97c-a229eccc3a1e" type="xs:boolean" minOccurs="0" />
                   <xs:element name="Status" msprop:FriendlyName="Status" msprop:DbColumnName="Status" msprop:design-time-name="23d8e844-237f-4717-8328-9ca300c9202a" type="xs:int" minOccurs="0" />
                   <xs:element name="Cancelled_Flag_Numeric" msdata:ReadOnly="true" msprop:DbColumnName="Cancelled_Flag_Numeric" msprop:IsLogical="True" msprop:design-time-name="3a0dcb10-b760-4dde-89df-240d01127e6e" msprop:Description="" msprop:ComputedColumnExpression="CAST(Is_Cancelled AS INT)" type="xs:int" minOccurs="0" />
+                  <xs:element name="isDelayed" msdata:ReadOnly="true" msprop:Description="" msprop:design-time-name="34fdb1d0-8089-44b8-8692-ea6b8cd93740" msprop:IsLogical="True" msprop:DbColumnName="isDelayed" msprop:ComputedColumnExpression="CASE WHEN Arr_Delay &gt; 15 THEN 1 ELSE 0 END" type="xs:int" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -423,25 +424,25 @@
           <xs:selector xpath=".//dbo_Fact_Flights" />
           <xs:field xpath="Flight_ID" />
         </xs:unique>
-        <xs:keyref name="FK__Fact_Flig__Origi__45F365D3" refer="dbo_Dim_Airport_Constraint1">
+        <xs:keyref name="FK__Fact_Flig__Date___440B1D61" refer="dbo_Dim_Date_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Origin_Airport_ID" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Airli__44FF419A" refer="Constraint1">
-          <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Airline_ID" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Dest___46E78A0C" refer="dbo_Dim_Airport_Constraint1">
-          <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Dest_Airport_ID" />
+          <xs:field xpath="Date_Key" />
         </xs:keyref>
         <xs:keyref name="FK__Fact_Flig__Cance__47DBAE45" refer="dbo_Dim_Reason_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
           <xs:field xpath="Cancel_Reason_ID" />
         </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Date___440B1D61" refer="dbo_Dim_Date_Constraint1">
+        <xs:keyref name="FK__Fact_Flig__Dest___46E78A0C" refer="dbo_Dim_Airport_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Date_Key" />
+          <xs:field xpath="Dest_Airport_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Flig__Airli__44FF419A" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Flights" />
+          <xs:field xpath="Airline_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Flig__Origi__45F365D3" refer="dbo_Dim_Airport_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Flights" />
+          <xs:field xpath="Origin_Airport_ID" />
         </xs:keyref>
       </xs:element>
     </xs:schema>

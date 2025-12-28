@@ -18,7 +18,13 @@ FROM [DDS Airline];
 
  -- Xu hướng thời gian Taxi trung bình theo Quý
 SELECT 
-    { [Measures].[Avg Total Taxi] } ON COLUMNS,
-    NON EMPTY { [Dim Date].[Year].MEMBERS * [Dim Date].[Quarter].MEMBERS } ON ROWS
+    {
+        [Measures].[Year For Quarter],
+        [Measures].[Quarter Display],
+        [Measures].[Avg Total Taxi]
+    } ON COLUMNS,
+    NON EMPTY (
+        [Dim Date].[Calendar].[Quarter].Members
+    ) ON ROWS
 FROM [DDS Airline];
 

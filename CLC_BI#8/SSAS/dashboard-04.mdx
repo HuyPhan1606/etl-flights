@@ -19,11 +19,18 @@ SELECT
     ) ON ROWS
 FROM [DDS Airline];
 
-
--- Biến động các sự cố rủi ro theo từng Quý.
-SELECT 
-    {[Measures].[Sum Cancelled], [Measures].[Diverted Count]} ON COLUMNS,
-    NON EMPTY (
-        [Dim Date].[Year].[Year].Members * [Dim Date].[Quarter].[Quarter].Members * [Dim Date].[Month Name].[Month Name].Members
+-- Biến động các sự cố rủi ro theo từng thời điểm.
+SELECT
+    {
+        [Measures].[Year],
+        [Measures].[Quarter],
+        [Measures].[Month Name],
+        [Measures].[Month Number],
+        [Measures].[Sum Cancelled], 
+        [Measures].[Diverted Count]
+    } ON COLUMNS,
+    FILTER(
+        [Dim Date].[Calendar].[Month Num].Members,
+        [Measures].[Sum Cancelled] > 0
     ) ON ROWS
 FROM [DDS Airline];

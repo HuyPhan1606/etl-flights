@@ -13,6 +13,6 @@ FROM [DDS Airline];
 -- Xu hướng hiệu suất OTP theo tháng của hãng được chọn
 SELECT 
     { [Measures].[OTP %] } ON COLUMNS,
-    NON EMPTY { [Dim Date].[Month Name].MEMBERS } ON ROWS
+    NON EMPTY { [Calendar].[Month Name].MEMBERS } ON ROWS
 FROM [DDS Airline]
 WHERE ( [Dim Airline].[Airline Name].&[American Airlines Inc.] );

@@ -35,11 +35,20 @@ FROM [DDS Airline];
 
 -- Xu hướng số chuyến bay theo tháng/quý.
 SELECT 
-    {[Measures].[Fact Flights Count]} ON COLUMNS,
-    NON EMPTY (
-        [Dim Date].[Year].[Year].Members * [Dim Date].[Quarter].[Quarter].Members * [Dim Date].[Month Name].[Month Name].Members
+    {
+        [Measures].[Year],
+        [Measures].[Quarter],
+        [Measures].[Month Name],
+        [Measures].[Month Number],
+        [Measures].[Fact Flights Count]
+    } ON COLUMNS, 
+    FILTER(
+        [Dim Date].[Calendar].[Month Num].Members,
+        [Measures].[Fact Flights Count] > 0
     ) ON ROWS
 FROM [DDS Airline];
+
+
 
 
 
