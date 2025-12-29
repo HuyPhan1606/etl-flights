@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="94732a98-d8d3-4fb0-9d60-9c45d2437dfe" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c517f459-859c-41b2-b915-839dde1f7a33" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DDS Airline</ID>
   <Name>DDS Airline</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -398,7 +398,14 @@
                   <xs:element name="Is_Diverted" msprop:FriendlyName="Is_Diverted" msprop:DbColumnName="Is_Diverted" msprop:design-time-name="7f6af8a4-f326-4f85-a97c-a229eccc3a1e" type="xs:boolean" minOccurs="0" />
                   <xs:element name="Status" msprop:FriendlyName="Status" msprop:DbColumnName="Status" msprop:design-time-name="23d8e844-237f-4717-8328-9ca300c9202a" type="xs:int" minOccurs="0" />
                   <xs:element name="Cancelled_Flag_Numeric" msdata:ReadOnly="true" msprop:DbColumnName="Cancelled_Flag_Numeric" msprop:IsLogical="True" msprop:design-time-name="3a0dcb10-b760-4dde-89df-240d01127e6e" msprop:Description="" msprop:ComputedColumnExpression="CAST(Is_Cancelled AS INT)" type="xs:int" minOccurs="0" />
-                  <xs:element name="isDelayed" msdata:ReadOnly="true" msprop:Description="" msprop:design-time-name="34fdb1d0-8089-44b8-8692-ea6b8cd93740" msprop:IsLogical="True" msprop:DbColumnName="isDelayed" msprop:ComputedColumnExpression="CASE WHEN Arr_Delay &gt; 15 THEN 1 ELSE 0 END" type="xs:int" />
+                  <xs:element name="isDelayed" msdata:ReadOnly="true" msprop:DbColumnName="isDelayed" msprop:IsLogical="True" msprop:design-time-name="34fdb1d0-8089-44b8-8692-ea6b8cd93740" msprop:Description="" msprop:ComputedColumnExpression="CASE WHEN Arr_Delay &gt; 15 THEN 1 ELSE 0 END" type="xs:int" />
+                  <xs:element name="Time_Slot" msdata:ReadOnly="true" msprop:DbColumnName="Time_Slot" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN Scheduled_Dep_Time IS NULL THEN 'Unknown'&#xD;&#xA;    WHEN LEN(LTRIM(RTRIM(Scheduled_Dep_Time))) &lt; 3 THEN 'Unknown'&#xD;&#xA;    WHEN ISNUMERIC(Scheduled_Dep_Time) = 0 THEN 'Unknown'&#xD;&#xA;    WHEN CAST(Scheduled_Dep_Time AS INT) / 100 BETWEEN 0 AND 5 THEN 'Night (0h-6h)'&#xD;&#xA;    WHEN CAST(Scheduled_Dep_Time AS INT) / 100 BETWEEN 6 AND 11 THEN 'Morning (6h-12h)'&#xD;&#xA;    WHEN CAST(Scheduled_Dep_Time AS INT) / 100 BETWEEN 12 AND 17 THEN 'Afternoon (12h-18h)'&#xD;&#xA;    WHEN CAST(Scheduled_Dep_Time AS INT) / 100 BETWEEN 18 AND 23 THEN 'Evening (18h-24h)'&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="3f4797e8-bf87-4370-8cfd-f3b002e6ab9e" msprop:Description="">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="19" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -424,25 +431,25 @@
           <xs:selector xpath=".//dbo_Fact_Flights" />
           <xs:field xpath="Flight_ID" />
         </xs:unique>
-        <xs:keyref name="FK__Fact_Flig__Date___440B1D61" refer="dbo_Dim_Date_Constraint1">
+        <xs:keyref name="FK__Fact_Flig__Origi__45F365D3" refer="dbo_Dim_Airport_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Date_Key" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Cance__47DBAE45" refer="dbo_Dim_Reason_Constraint1">
-          <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Cancel_Reason_ID" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Dest___46E78A0C" refer="dbo_Dim_Airport_Constraint1">
-          <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Dest_Airport_ID" />
+          <xs:field xpath="Origin_Airport_ID" />
         </xs:keyref>
         <xs:keyref name="FK__Fact_Flig__Airli__44FF419A" refer="Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
           <xs:field xpath="Airline_ID" />
         </xs:keyref>
-        <xs:keyref name="FK__Fact_Flig__Origi__45F365D3" refer="dbo_Dim_Airport_Constraint1">
+        <xs:keyref name="FK__Fact_Flig__Dest___46E78A0C" refer="dbo_Dim_Airport_Constraint1">
           <xs:selector xpath=".//dbo_Fact_Flights" />
-          <xs:field xpath="Origin_Airport_ID" />
+          <xs:field xpath="Dest_Airport_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Flig__Cance__47DBAE45" refer="dbo_Dim_Reason_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Flights" />
+          <xs:field xpath="Cancel_Reason_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Flig__Date___440B1D61" refer="dbo_Dim_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Flights" />
+          <xs:field xpath="Date_Key" />
         </xs:keyref>
       </xs:element>
     </xs:schema>
