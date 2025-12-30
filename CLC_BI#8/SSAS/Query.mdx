@@ -1,0 +1,145 @@
+-- Dashboard 1
+-- D1 - Flight Volume Trend
+SELECT { 
+	[Measures].[Year], 
+	[Measures].[Quarter], 
+	[Measures].[Month Name], 
+	[Measures].[Month Number], 
+	[Measures].[Fact Flights Count] 
+} ON COLUMNS, 
+FILTER( [Dim Date].[Calendar].[Month Num].Members, [Measures].[Fact Flights Count] > 0 ) 
+ON ROWS FROM [DDS Airline];
+-- D1 - KPI: Fact Flight Count, OTP%
+SELECT {
+	[Measures].[Fact Flights Count], 
+	[Measures].[OTP Percentage]} 
+ON COLUMNS 
+FROM [DDS Airline];
+-- D1 - KPIs: Delay Rate, Cancellation Rate
+SELECT {
+	[Measures].[Cancellation Rate], 
+	[Measures].[Delay Rate > 15m]} 
+	ON COLUMNS 
+FROM [DDS Airline];
+-- D1 - Top 5 Airlines by OTP
+SELECT {
+	[Measures].[OTP %]
+} ON COLUMNS, 
+TOPCOUNT( [Dim Airline].[Airline Name].[Airline Name].Members, 5, [Measures].[OTP %] ) 
+ON ROWS FROM [DDS Airline];
+-- D1 - Top 5 Airports by Delay Rate
+SELECT {
+	[Measures].[Fact Flights Count], 
+	[Measures].[Delayed Flights Count], 
+	[Measures].[Total Delay Rate]} ON COLUMNS, 
+TOPCOUNT( [Origin Airport].[Airport Name].[Airport Name].Members, 5, [Measures].[Total Delay Rate] ) 
+ON ROWS FROM [DDS Airline];
+-- Dashboard 2
+-- D2 - Delay Count by Time Slot
+SELECT 
+    { 
+        [Measures].[Delayed Flights Count], 
+        [Measures].[Total Delay Rate] 
+    } ON COLUMNS,
+    ORDER(
+        [Dim Flight Time].[Time Slot].[Time Slot].Members,
+        [Dim Flight Time].[Time Slot].CurrentMember.Member_Key,
+        ASC
+    ) ON ROWS
+FROM [DDS Airline];
+-- D2 - Delay Severity by Cause
+SELECT {
+  [Measures].[Avg Carrier Delay],
+  [Measures].[Avg Weather Delay],
+  [Measures].[Avg NAS Delay],
+  [Measures].[Avg Security Delay],
+  [Measures].[Avg Late Aircraft Delay]
+} ON COLUMNS
+FROM [DDS Airline]];
+-- D2 - Distribution of Delay Causes
+SELECT {
+  [Measures].[Carrier Delay Minutes],
+  [Measures].[Weather Delay Minutes],
+  [Measures].[NAS Delay Minutes],
+  [Measures].[Security Delay Minutes],
+  [Measures].[Late Aircraft Delay Minutes]
+} ON COLUMNS
+FROM [DDS Airline]
+-- D2 - Monthly/Seasonal Delay Trends
+SELECT { 
+	[Measures].[Year], [Measures].[Quarter], 
+	[Measures].[Month Name], 
+	[Measures].[Month Number], 
+	[Measures].[Delayed Flights Count] } 
+ON COLUMNS, 
+FILTER( [Dim Date].[Calendar].[Month Num].Members, 
+[Measures].[Delayed Flights Count] > 0 ) 
+ON ROWS FROM [DDS Airline];
+-- D2 - Top Airports with Highest Delays/Cancellations
+SELECT 
+    { 
+        [Measures].[Total Delay Rate], 
+        [Measures].[Cancellation Rate] 
+    } ON COLUMNS,
+    TOPCOUNT(
+        [Origin Airport].[Airport Name].[Airport Name].Members, 
+        10, 
+        [Measures].[Total Delay Min]
+    ) ON ROWS
+FROM [DDS Airline]
+-- Dashboard 3
+-- D3 - Incident Trend Analysis
+SELECT { 
+	[Measures].[Year], [Measures].[Quarter], 
+	[Measures].[Month Name], [Measures].[Month Number], 
+	[Measures].[Sum Cancelled], [Measures].[Diverted Count] } 
+ON COLUMNS, 
+FILTER( [Dim Date].[Calendar].[Month Num].Members, [Measures].[Sum Cancelled] > 0 ) 
+ON ROWS FROM [DDS Airline];
+-- D3 - KPIs: Diverted Count & Rate
+SELECT {
+	[Measures].[Fact Flights Count], 
+	[Measures].[Diverted Count], 
+	[Measures].[Diverted Rate]} 
+ON COLUMNS 
+FROM [DDS Airline];
+-- D3 - KPIs: Serious Delay Count & Rate
+SELECT {
+	[Measures].[Fact Flights Count], 
+	[Measures].[Serious Delay Count], 
+	[Measures].[Serious Delay Rate]
+} 
+ON COLUMNS FROM [DDS Airline];
+-- D3 - Operational Disruptions by State
+SELECT { 
+	[Measures].[Total Delay Rate], 
+	[Measures].[Cancellation Rate] } 
+ON COLUMNS, 
+NON EMPTY { [Origin Airport].[State].MEMBERS } 
+ON ROWS FROM [DDS Airline];
+-- D3 - Top 5 Destination Airports with Highest Diversions
+SELECT {[Measures].[Diverted Count]} ON COLUMNS, 
+TOPCOUNT( [Origin Airport].[Airport Name].[Airport Name].Members, 5, [Measures].[Diverted Count] ) 
+ON ROWS FROM [DDS Airline];
+-- D3 - Total Flights by Airport
+SELECT { 
+	[Measures].[Fact Flights Count], 
+	[Measures].[Arriving Flights] } 
+ON COLUMNS, 
+NON EMPTY { [Origin Airport].[Airport Name].MEMBERS } 
+ON ROWS FROM [DDS Airline];
+-- Dashboard 4
+-- D4 - Average Flight Delays by Airline
+SELECT { [Measures].[OTP %], [Measures].[Avg Dep Delay], [Measures].[Avg Arr Delay] } ON COLUMNS, NON EMPTY { [Dim Airline].[Airline Name].MEMBERS } ON ROWS FROM [DDS Airline];
+-- D4 - Cancellation Rate & Flight Count by Airline
+SELECT {
+	[Measures].[Fact Flights Count], 
+	[Measures].[Cancellation Rate] } 
+ON COLUMNS, NON EMPTY 
+{ [Dim Airline].[Airline Name].MEMBERS } 
+ON ROWS FROM [DDS Airline];
+-- D4 - OTP Trend Over Time
+SELECT { [Measures].[OTP %] } 
+ON COLUMNS, NON EMPTY { [Calendar].[Month Name].MEMBERS } 
+ON ROWS FROM [DDS Airline] 
+WHERE ( [Dim Airline].[Airline Name].&[American Airlines Inc.] );

@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>MSI\BI_ANALYSIS</TargetServer>
+        <TargetServer>LAPTOP-V28DRTUE\MSSQLSERVER03</TargetServer>
         <TargetDatabase>OLAP_Flights</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>

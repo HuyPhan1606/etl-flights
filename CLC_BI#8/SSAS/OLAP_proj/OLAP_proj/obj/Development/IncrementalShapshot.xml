@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>OLAP_Flights</Database>
+    <Server>LAPTOP-V28DRTUE\MSSQLSERVER03</Server>
+    <ConnectionString>Data Source=LAPTOP-V28DRTUE\MSSQLSERVER03;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>RqC+vranOZBLnFkuwtEzlWQ4g2s=29/12/2025 10:32:46 CH29/12/2025 9:36:56 CH</TimeStamp>
+        <ID>
+          <String>DDS Airline</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>/Qgv+3rcYXqMtrvJvDBFkoHrL/s=30/12/2025 1:02:50 SA29/12/2025 9:37:00 CH</TimeStamp>
+        <ID>
+          <String>DDS Airline</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6o3QcxbK2nxjcfhSlG0Fk/yLr/g=28/12/2025 5:46:53 CH28/12/2025 5:46:53 CH</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9nV4FJLP8IWF6OKOqcvOSAeC3/A=23/12/2025 2:22:11 CH23/12/2025 2:22:11 CH</TimeStamp>
+        <ID>
+          <String>Dim Reason</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6cdPdr5YxCkKfgdJA1A6B2CDifQ=28/12/2025 12:46:32 SA28/12/2025 12:46:32 SA</TimeStamp>
+        <ID>
+          <String>Dim Airport</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AZ7CmZggpVm3+wMjt9RLkST/zyo=28/12/2025 12:46:32 SA28/12/2025 12:46:32 SA</TimeStamp>
+        <ID>
+          <String>Dim Airline</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vOXi+TX6AKJJpA3CxD1k4VF2P/U=29/12/2025 9:37:00 CH29/12/2025 9:37:00 CH</TimeStamp>
+        <ID>
+          <String>Fact Flights</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+HVmo6jYQAGLTDxalrojZdvpfxU=29/12/2025 9:37:00 CH29/12/2025 9:37:00 CH</TimeStamp>
+        <ID>
+          <String>Fact Flights 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>SV0hLQwDRg1+eyx6JNs77b6/m1I=30/12/2025 1:03:30 SA29/12/2025 9:37:00 CHwIUfQAAC7perpDk7kxbnbzvoMR0=30/12/2025 1:02:50 SA29/12/2025 9:37:00 CH</TimeStamp>
+        <ID>
+          <String>DDS Airline 1</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>jQ4goosRrJ+uSd9i7jNzuQWkDu0=23/12/2025 2:22:11 CH23/12/2025 2:22:11 CH</TimeStamp>
+      <ID>
+        <String>OLAP_Flights</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2025-12-29T18:03:33.676667Z</LastDeployed>
+</DeploymentSnapshot>
